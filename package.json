@@ -1,5 +1,5 @@
 {
-  "name": "@trendmicro/node-red-workloadsecurity",
+  "name": "@trendmicro-cloudone/node-red-workloadsecurity",
   "version": "0.1.0",
   "description": "Trend Micro Workload Security nodes for Node-RED",
   "main": "index.js",
@@ -31,7 +31,7 @@
     "async": "^3.2.4",
     "request": "^2.88.2",
     "uuid": "^8.3.2",
-    "@trendmicro/node-red-cloudone" : "0.1.0"
+    "@trendmicro-cloudone/node-red-core" : "^0.2.0"
   },
   "keywords": [
     "trendmicro",
