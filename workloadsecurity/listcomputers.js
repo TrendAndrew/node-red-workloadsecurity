@@ -23,19 +23,25 @@ module.exports = function(RED) {
                     'Api-Version': 'v1',
                     //'Content-Type': 'application/vnd.api+json'
                 }
+            }, null, function(body) {
+                console.log(body);
+                if (!body || !body.computers) {
+                    node.status({ fill:"red", shape:"ring", text:"Response Error, Missing 'computers'." });
+                    return;
+                }
+                const count = body.computers.length;
+                node.status({ fill:"green", shape:"dot", text:"Listed " + count + ' computer' + (count === 1 ? '' : 's')});
+                if (streaming) {
+                    // foreach (computers) {
+                    //     node.send([computer]);
+                    // }
+                } else {
+                    node.send({
+                        payload: body.computers
+                    });
+                }
             });
-        }, null, function(body) {
-            node.status({});
-            console.log(body);
-            if (streaming) {
-                // foreach (computers) {
-                //     node.send([computer]);
-                // }
-            } else {
-                node.send(body);
-            }
         });
-
     }
     RED.nodes.registerType("list computers", ListComputers);
 };
