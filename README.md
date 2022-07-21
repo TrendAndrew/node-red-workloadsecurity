@@ -1,6 +1,6 @@
 # TrendMicro Cloud One Workload Security Node-RED Client Nodes
 [![Latest NPM Version](https://img.shields.io/npm/v/node-red-contrib-alarm.svg)](https://www.npmjs.com/package/@trendmicro-cloudone/node-red-workloadsecurity)
-[![License](https://img.shields.io/github/license/Anamico/node-red-contrib-proofpoint.svg)](https://github.com/TrendAndrew/node-red-workloadsecurity/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/Anamico/node-red-contrib-proofpoint.svg)](https://github.com/TrendAndrew/node-red-workloadsecurity/blob/main/LICENSE)
 [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JUYN6NBFELTC2&source=url)
 
 Node Red Nodes Implementing the Trend Micro CloudOne Workload Security APIs: https://cloudone.trendmicro.com/docs/workload-security/api-reference/
@@ -9,7 +9,7 @@ Node Red Nodes Implementing the Trend Micro CloudOne Workload Security APIs: htt
 
 Trend Micro CloudOne Workload Security
 
-![List Computers Flow Example](https://github.com/TrendAndrew/node-red-cloudone/raw/master/images/example-listcomputers.png "List Computers Flow Example")
+![List Computers Flow Example](https://github.com/TrendAndrew/node-red-cloudone/raw/main/images/example-listcomputers.png "List Computers Flow Example")
 
 # Documentation
 
@@ -21,7 +21,7 @@ To GET all computers, use the "List Computers" node.
 
 The nodes take input msgs to trigger the api calls, the msg.payload can typically have arguments to override the node settings, for instance you can pass in API arguments such as query strings, account ids, etc.
 
-![List Computers Flow Example](https://github.com/TrendAndrew/node-red-cloudone/raw/master/images/example-listcomputers.png "List Computers Flow Example")
+![List Computers Flow Example](https://github.com/TrendAndrew/node-red-cloudone/raw/main/images/example-listcomputers.png "List Computers Flow Example")
 
 The node will provide status on the call and on the response content summary (in this example, how many computers were found).
 
