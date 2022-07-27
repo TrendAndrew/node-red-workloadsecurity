@@ -4,7 +4,9 @@
         color: '#F0F3F5',
         defaults: {
             name: { value : "" },
-            cloudone: { type: 'cloudone service', required: true }
+            cloudone: { type: 'cloudone service', required: true },
+            expand: { value: "", required: false },
+            overrides: { value: false, required: true }
         },
         inputs: 1,
         outputs: 1,
@@ -28,8 +30,56 @@
         <label for="node-input-cloudone"><i class="fa fa-server"></i> Service</label>
         <input type="text" id="node-input-cloudone" placeholder="cloudone">
     </div>
+
+    <div class="form-row">
+        <label for="node-input-expand"><i class="fa fa-filter"></i> Expand</label>
+        <select id="node-input-expand" size="10" multiple="true">
+            <option value="activityMonitoring">Activity Monitoring</option>
+            <option value="allSecurityModules">All Security Modules</option>
+            <option value="allVirtualMachineSummaries">All Virtual Machine Summaries</option>
+            <option value="applicationControl">Application Control</option>
+            <option value="antiMalware">AntiMalware</option>
+            <option value="azureARMVirtualMachineSummary">Azure ARM Virtual Machine Summary</option>
+            <option value="computerSettings">Computer Settings</option>
+            <option value="computerStatus">Computer Status</option>
+            <option value="deviceControl">Device Control</option>
+            <option value="ec2VirtualMachineSummary">EC2 Virtual Machine Summary</option>
+            <option value="ESXSummary">ESX Summary</option>
+            <option value="firewall">Firewall</option>
+            <option value="gcpVirtualMachineSummary">GCP Virtual Machine Summary</option>
+            <option value="integrityMonitoring">Integrity Monitoring</option>
+            <option value="interfaces">Interfaces</option>
+            <option value="intrusionPrevention">Intrusion Prevention</option>
+            <option value="logInspection">Log Inspection</option>
+            <option value="noConnectorVirtualMachineSummary">No Connector Virtual Machine Summary</option>
+            <option value="SAP">SAP</option>
+            <option value="securityUpdates">Security Updates</option>
+            <option value="tasks">Tasks</option>
+            <option value="vcloudVMVirtualMachineSummary">Vcloud VM Virtual Machine Summary</option>
+            <option value="vmwareVMVirtualMachineSummary">Vmware VM Virtual Machine Summary</option>
+            <option value="webReputation">Web Reputation</option>
+            <option value="workspaceVirtualMachineSummary">Workspace Virtual Machine Summary</option>
+        </select>
+    </div>
+    <div class="form-tips">Tip: You can also specify the expand list with &lt;msg.payload.expand = ['applicationControl','none']&gt;.</div>
+
+    <div class="form-row"></div>
+    <div class="form-row">
+        <label for="node-input-overrides"><i class="fa fa-server"></i> Overrides</label>
+        <input type="checkbox" id="node-input-overrides">
+    </div>
+    <div class="form-tips">Tip: You can also specify overrides setting with &lt;msg.payload.overrides = false | true&gt;.</div>
+
 </script>
 
 <script type="text/x-red" data-help-name="list computers">
-    <p>todo: https://cloudone.trendmicro.com/docs/workload-security/api-reference/tag/Computers#operation/listComputers</p>
+    <h3>List Computers</h3>
+    <p>Lists all computers.</p>
+
+    <h3>Reference</h3>
+    https://cloudone.trendmicro.com/docs/workload-security/api-reference/tag/Computers#operation/listComputers
+
+    <h3>Donate to show your support or gratitude</h3>
+    <p>Donations support the open source community and help authors continue to support these projects, please feel free to donate here.
+        <a target="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JUYN6NBFELTC2&source=url"><img src="https://img.shields.io/badge/donate-PayPal-green.svg"></a></p>
 </script>

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    RED.nodes.registerType('list administrators', {
+        category: 'workload security',
+        color: '#F0F3F5',
+        defaults: {
+            name: { value : "" },
+            cloudone: { type: 'cloudone service', required: true }
+        },
+        inputs: 1,
+        outputs: 1,
+        inputLabels: "trigger",
+        outputLabels: "json",
+        paletteLabel: 'List Administrators',
+        icon: "trendmicro.png",
+        label: function() {
+            return this.name || 'List Administrators';
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="list administrators">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-cloudone"><i class="fa fa-server"></i> Service</label>
+        <input type="text" id="node-input-cloudone" placeholder="cloudone">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="list administrators">
+    <h3>List Administrators</h3>
+    <p>Lists all administrators.</p>
+
+    <h3>Reference</h3>
+    https://cloudone.trendmicro.com/docs/workload-security/api-reference/tag/Administrators#operation/listAdministrators
+
+    <h3>Donate to show your support or gratitude</h3>
+    <p>Donations support the open source community and help authors continue to support these projects, please feel free to donate here.
+        <a target="donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JUYN6NBFELTC2&source=url"><img src="https://img.shields.io/badge/donate-PayPal-green.svg"></a></p>
+</script>
